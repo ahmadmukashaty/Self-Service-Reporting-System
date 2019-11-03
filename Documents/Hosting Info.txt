@@ -1,0 +1,28 @@
+Link: https://www.myasp.net/
+Username: SelfSeviceRS
+Password: SSRS_123
+host Account id: selfsevicers-001
+hosting plan name: W60-US
+
+FTP address: FTP.SITE4NOW.NET
+FTP Username: selfsevicers-001
+FTP Password: SSRS_123
+FTP Directory: \
+
+Expiration Date: Jan 2, 2020
+
+Database name: db_a4faa3_SelfServiceRS
+User name: DB_A4FAA3_SelfServiceRS_admin
+Database password: SSRS_123
+
+
+Database name: db_a4faa3_SelfServiceRS
+User name: DB_A4FAA3_SelfServiceRS_admin
+
+SQL SERVER IP: sql5047.site4now.net
+SQL SERVER Port: 1433
+
+API URL: http://selfsevicers-001-site1.itempurl.com/
+Attribute Tree Api: http://selfsevicers-001-site1.itempurl.com/api/GetAttributeTree?ClassificationName=Purchase%20Order
+
+ 
