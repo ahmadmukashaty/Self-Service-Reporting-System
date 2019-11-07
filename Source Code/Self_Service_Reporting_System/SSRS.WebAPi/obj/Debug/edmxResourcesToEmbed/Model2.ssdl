@@ -1,0 +1,1200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A4FAA3_SelfServiceRSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BuyingGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BuyingGroupName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="StateProvince_ID" Type="int" Nullable="false" />
+    <Property Name="Location" Type="geography" />
+    <Property Name="LatestRecordedPopulation" Type="bigint" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="FormalName" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="IsoAlpha3Code" Type="nvarchar" MaxLength="3" />
+    <Property Name="IsoNumericCode" Type="int" />
+    <Property Name="CountryType" Type="nvarchar" MaxLength="20" />
+    <Property Name="LatestRecordedPopulation" Type="bigint" />
+    <Property Name="Continent" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Region" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Subregion" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Border" Type="geography" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="BillToCustomer_ID" Type="int" Nullable="false" />
+    <Property Name="CustomerCategory_ID" Type="int" Nullable="false" />
+    <Property Name="BuyingGroup_ID" Type="int" />
+    <Property Name="PrimaryContactPerson_ID" Type="int" Nullable="false" />
+    <Property Name="AlternateContactPerson_ID" Type="int" />
+    <Property Name="DeliveryMethod_ID" Type="int" Nullable="false" />
+    <Property Name="City_ID" Type="int" Nullable="false" />
+    <Property Name="CreditLimit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AccountOpenedDate" Type="date" Nullable="false" />
+    <Property Name="StandardDiscountPercentage" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="IsStatementSent" Type="bit" Nullable="false" />
+    <Property Name="IsOnCreditHold" Type="bit" Nullable="false" />
+    <Property Name="PaymentDays" Type="int" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="FaxNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="DeliveryRun" Type="nvarchar" MaxLength="5" />
+    <Property Name="RunPosition" Type="nvarchar" MaxLength="5" />
+    <Property Name="WebsiteURL" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="DeliveryAddressLine1" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="DeliveryAddressLine2" Type="nvarchar" MaxLength="60" />
+    <Property Name="DeliveryPostalCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="DeliveryLocation" Type="geography" />
+    <Property Name="PostalAddressLine1" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="PostalAddressLine2" Type="nvarchar" MaxLength="60" />
+    <Property Name="PostalPostalCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerCategoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerTransaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_ID" Type="int" Nullable="false" />
+    <Property Name="TransactionType_ID" Type="int" Nullable="false" />
+    <Property Name="Invoice_ID" Type="int" />
+    <Property Name="PaymentMethod_ID" Type="int" />
+    <Property Name="TransactionDate" Type="date" Nullable="false" />
+    <Property Name="AmountExcludingTax" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TaxAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TransactionAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OutstandingBalance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="FinalizationDate" Type="date" />
+    <Property Name="IsFinalized" Type="bit" StoreGeneratedPattern="Computed" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeliveryMethod">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeliveryMethodName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_ID" Type="int" Nullable="false" />
+    <Property Name="BillToCustomer_ID" Type="int" Nullable="false" />
+    <Property Name="Order_ID" Type="int" />
+    <Property Name="DeliveryMethod_ID" Type="int" Nullable="false" />
+    <Property Name="ContactPerson_ID" Type="int" Nullable="false" />
+    <Property Name="AccountsPerson_ID" Type="int" Nullable="false" />
+    <Property Name="SalespersonPerson_ID" Type="int" Nullable="false" />
+    <Property Name="PackedByPerson_ID" Type="int" Nullable="false" />
+    <Property Name="InvoiceDate" Type="date" Nullable="false" />
+    <Property Name="CustomerPurchaseOrderNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="IsCreditNote" Type="bit" Nullable="false" />
+    <Property Name="CreditNoteReason" Type="nvarchar(max)" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="DeliveryInstructions" Type="nvarchar(max)" />
+    <Property Name="InternalComments" Type="nvarchar(max)" />
+    <Property Name="TotalDryItems" Type="int" Nullable="false" />
+    <Property Name="TotalChillerItems" Type="int" Nullable="false" />
+    <Property Name="DeliveryRun" Type="nvarchar" MaxLength="5" />
+    <Property Name="RunPosition" Type="nvarchar" MaxLength="5" />
+    <Property Name="ReturnedDeliveryData" Type="nvarchar(max)" />
+    <Property Name="ConfirmedDeliveryTime" Type="datetime2" Precision="7" StoreGeneratedPattern="Computed" />
+    <Property Name="ConfirmedReceivedBy" Type="nvarchar" MaxLength="4000" StoreGeneratedPattern="Computed" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvoiceLine">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Invoice_ID" Type="int" Nullable="false" />
+    <Property Name="StockItem_ID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PackageType_ID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TaxRate" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="TaxAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LineProfit" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ExtendedPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_ID" Type="int" Nullable="false" />
+    <Property Name="SalespersonPerson_ID" Type="int" Nullable="false" />
+    <Property Name="PickedByPerson_ID" Type="int" />
+    <Property Name="ContactPerson_ID" Type="int" Nullable="false" />
+    <Property Name="BackorderOrder_ID" Type="int" />
+    <Property Name="OrderDate" Type="date" Nullable="false" />
+    <Property Name="ExpectedDeliveryDate" Type="date" Nullable="false" />
+    <Property Name="CustomerPurchaseOrderNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="IsUndersupplyBackordered" Type="bit" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="DeliveryInstructions" Type="nvarchar(max)" />
+    <Property Name="InternalComments" Type="nvarchar(max)" />
+    <Property Name="PickingCompletedWhen" Type="datetime2" Precision="7" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderLine">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Order_ID" Type="int" Nullable="false" />
+    <Property Name="StockItem_ID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PackageType_ID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TaxRate" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="PickedQuantity" Type="int" Nullable="false" />
+    <Property Name="PickingCompletedWhen" Type="datetime2" Precision="7" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymentMethod">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentMethodName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supplier_ID" Type="int" Nullable="false" />
+    <Property Name="OrderDate" Type="date" Nullable="false" />
+    <Property Name="DeliveryMethod_ID" Type="int" Nullable="false" />
+    <Property Name="ContactPerson_ID" Type="int" Nullable="false" />
+    <Property Name="ExpectedDeliveryDate" Type="date" />
+    <Property Name="SupplierReference" Type="nvarchar" MaxLength="20" />
+    <Property Name="IsOrderFinalized" Type="bit" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="InternalComments" Type="nvarchar(max)" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseOrderLine">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PurchaseOrder_ID" Type="int" Nullable="false" />
+    <Property Name="StockItem_ID" Type="int" Nullable="false" />
+    <Property Name="OrderedOuters" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ReceivedOuters" Type="int" Nullable="false" />
+    <Property Name="PackageType_ID" Type="int" Nullable="false" />
+    <Property Name="ExpectedUnitPricePerOuter" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LastReceiptDate" Type="date" />
+    <Property Name="IsOrderLineFinalized" Type="bit" Nullable="false" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SpecialDeal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StockItem_ID" Type="int" />
+    <Property Name="Customer_ID" Type="int" />
+    <Property Name="BuyingGroup_ID" Type="int" />
+    <Property Name="CustomerCategory_ID" Type="int" />
+    <Property Name="StockGroup_ID" Type="int" />
+    <Property Name="DealDescription" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="EndDate" Type="date" Nullable="false" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiscountPercentage" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SSRS_ATTRIBUTE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SSRS_TABLE_ID" Type="int" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+    <Property Name="DISPLAY_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="ATTR_ORDER" Type="int" />
+    <Property Name="DATATYPE" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SSRS_CATEGORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CAT_ORDER" Type="int" />
+    <Property Name="SSRS_MODULE_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="SSRS_CLASSIFICATION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IS_UNION" Type="bit" />
+  </EntityType>
+  <EntityType Name="SSRS_CLASSIFICATION_CATEGORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SSRS_CLASSIFICATION_ID" Type="int" Nullable="false" />
+    <Property Name="SSRS_CATEGORY_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SSRS_CLASSIFICATION_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SSRS_CLASSIFICATION_ID" Type="int" />
+    <Property Name="SSRS_TABLE_ID" Type="int" />
+    <Property Name="DISPLAY_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="TABLE_ORDER" Type="int" />
+    <Property Name="PARENT_ID" Type="int" />
+    <Property Name="SSRS_RELATION_TYPE_ID" Type="int" />
+    <Property Name="INJUNCTION_TABLE" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SSRS_CLASSIFICATION_TABLE_TYPE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SSRS_CLASSIFICATION_TABLE_ID" Type="int" />
+    <Property Name="SSRS_TYPE_ID" Type="int" />
+    <Property Name="DISPLAY_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="TABLE_ORDER" Type="int" />
+  </EntityType>
+  <EntityType Name="SSRS_IS_MAIN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SSRS_CLASSIFICATION_TABLE_TYPE_ID" Type="int" />
+    <Property Name="SSRS_ATTRIBUTE_ID" Type="int" />
+    <Property Name="PRIORITY" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SSRS_MODULE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SSRS_RELATION_TYPE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SSRS_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SSRS_TYPE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="StateProvince">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateProvinceCode" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="StateProvinceName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Country_ID" Type="int" Nullable="false" />
+    <Property Name="SalesTerritory" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Border" Type="geography" />
+    <Property Name="LatestRecordedPopulation" Type="bigint" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SupplierCategory_ID" Type="int" Nullable="false" />
+    <Property Name="PrimaryContactPerson_ID" Type="int" Nullable="false" />
+    <Property Name="AlternateContactPerson_ID" Type="int" Nullable="false" />
+    <Property Name="DeliveryMethod_ID" Type="int" />
+    <Property Name="City_ID" Type="int" Nullable="false" />
+    <Property Name="SupplierReference" Type="nvarchar" MaxLength="20" />
+    <Property Name="BankAccountName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankAccountBranch" Type="nvarchar" MaxLength="50" />
+    <Property Name="BankAccountCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="BankAccountNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="BankInternationalCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="PaymentDays" Type="int" Nullable="false" />
+    <Property Name="InternalComments" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="FaxNumber" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="WebsiteURL" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="DeliveryAddressLine1" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="DeliveryAddressLine2" Type="nvarchar" MaxLength="60" />
+    <Property Name="DeliveryPostalCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="DeliveryLocation" Type="geography" />
+    <Property Name="PostalAddressLine1" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="PostalAddressLine2" Type="nvarchar" MaxLength="60" />
+    <Property Name="PostalPostalCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SupplierCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierCategoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SupplierTransaction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supplier_ID" Type="int" Nullable="false" />
+    <Property Name="TransactionType_ID" Type="int" Nullable="false" />
+    <Property Name="PurchaseOrder_ID" Type="int" />
+    <Property Name="PaymentMethod_ID" Type="int" />
+    <Property Name="SupplierInvoiceNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="TransactionDate" Type="date" Nullable="false" />
+    <Property Name="AmountExcludingTax" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TaxAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TransactionAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OutstandingBalance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="FinalizationDate" Type="date" />
+    <Property Name="IsFinalized" Type="bit" StoreGeneratedPattern="Computed" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TransactionType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionTypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastEditedBy" Type="int" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ValidTo" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__City__StateProvi__04E4BC85">
+    <End Role="StateProvince" Type="Self.StateProvince" Multiplicity="1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StateProvince">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="StateProvince_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__Buying__06CD04F7">
+    <End Role="BuyingGroup" Type="Self.BuyingGroup" Multiplicity="0..1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BuyingGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="BuyingGroup_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__City_I__282DF8C2">
+    <End Role="City" Type="Self.City" Multiplicity="1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="City_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__Custom__05D8E0BE">
+    <End Role="CustomerCategory" Type="Self.CustomerCategory" Multiplicity="1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerCategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="CustomerCategory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__Delive__07C12930">
+    <End Role="DeliveryMethod" Type="Self.DeliveryMethod" Multiplicity="1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeliveryMethod">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="DeliveryMethod_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Customer__Delive__08B54D69">
+    <End Role="DeliveryMethod" Type="Self.DeliveryMethod" Multiplicity="1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeliveryMethod">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="DeliveryMethod_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerT__Custo__09A971A2">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="CustomerTransaction" Type="Self.CustomerTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CustomerTransaction">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerT__Invoi__0B91BA14">
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="0..1" />
+    <End Role="CustomerTransaction" Type="Self.CustomerTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CustomerTransaction">
+        <PropertyRef Name="Invoice_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerT__Payme__0C85DE4D">
+    <End Role="PaymentMethod" Type="Self.PaymentMethod" Multiplicity="0..1" />
+    <End Role="CustomerTransaction" Type="Self.CustomerTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMethod">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CustomerTransaction">
+        <PropertyRef Name="PaymentMethod_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CustomerT__Trans__0A9D95DB">
+    <End Role="TransactionType" Type="Self.TransactionType" Multiplicity="1" />
+    <End Role="CustomerTransaction" Type="Self.CustomerTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CustomerTransaction">
+        <PropertyRef Name="TransactionType_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Invoice__Custome__0D7A0286">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Invoice__Deliver__0F624AF8">
+    <End Role="DeliveryMethod" Type="Self.DeliveryMethod" Multiplicity="1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeliveryMethod">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="DeliveryMethod_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Invoice__Order_I__0E6E26BF">
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="Order_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InvoiceLi__Invoi__10566F31">
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+    <End Role="InvoiceLine" Type="Self.InvoiceLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InvoiceLine">
+        <PropertyRef Name="Invoice_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InvoiceLi__Invoi__114A936A">
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+    <End Role="InvoiceLine" Type="Self.InvoiceLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InvoiceLine">
+        <PropertyRef Name="Invoice_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Order__Customer___123EB7A3">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Order__Customer___1332DBDC">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderLine__Order__14270015">
+    <End Role="Order" Type="Self.Order" Multiplicity="1" />
+    <End Role="OrderLine" Type="Self.OrderLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrderLine">
+        <PropertyRef Name="Order_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PurchaseO__Deliv__160F4887">
+    <End Role="DeliveryMethod" Type="Self.DeliveryMethod" Multiplicity="1" />
+    <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeliveryMethod">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PurchaseOrder">
+        <PropertyRef Name="DeliveryMethod_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PurchaseO__Purch__17036CC0">
+    <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="1" />
+    <End Role="PurchaseOrderLine" Type="Self.PurchaseOrderLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseOrder">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PurchaseOrderLine">
+        <PropertyRef Name="PurchaseOrder_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PurchaseO__Suppl__151B244E">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PurchaseOrder">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SpecialDe__Buyin__18EBB532">
+    <End Role="BuyingGroup" Type="Self.BuyingGroup" Multiplicity="0..1" />
+    <End Role="SpecialDeal" Type="Self.SpecialDeal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BuyingGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SpecialDeal">
+        <PropertyRef Name="BuyingGroup_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SpecialDe__Custo__17F790F9">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="SpecialDeal" Type="Self.SpecialDeal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SpecialDeal">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SpecialDe__Custo__19DFD96B">
+    <End Role="CustomerCategory" Type="Self.CustomerCategory" Multiplicity="0..1" />
+    <End Role="SpecialDeal" Type="Self.SpecialDeal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerCategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SpecialDeal">
+        <PropertyRef Name="CustomerCategory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_ATTR__SSRS___398D8EEE">
+    <End Role="SSRS_TABLE" Type="Self.SSRS_TABLE" Multiplicity="0..1" />
+    <End Role="SSRS_ATTRIBUTE" Type="Self.SSRS_ATTRIBUTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_TABLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_ATTRIBUTE">
+        <PropertyRef Name="SSRS_TABLE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_CATE__SSRS___4CA06362">
+    <End Role="SSRS_MODULE" Type="Self.SSRS_MODULE" Multiplicity="0..1" />
+    <End Role="SSRS_CATEGORY" Type="Self.SSRS_CATEGORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_MODULE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_CATEGORY">
+        <PropertyRef Name="SSRS_MODULE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_CLAS__PAREN__3F466844">
+    <End Role="SSRS_CLASSIFICATION_TABLE" Type="Self.SSRS_CLASSIFICATION_TABLE" Multiplicity="0..1" />
+    <End Role="SSRS_CLASSIFICATION_TABLE1" Type="Self.SSRS_CLASSIFICATION_TABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_CLASSIFICATION_TABLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_CLASSIFICATION_TABLE1">
+        <PropertyRef Name="PARENT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_CLAS__SSRS___37A5467C">
+    <End Role="SSRS_CLASSIFICATION" Type="Self.SSRS_CLASSIFICATION" Multiplicity="1" />
+    <End Role="SSRS_CLASSIFICATION_CATEGORY" Type="Self.SSRS_CLASSIFICATION_CATEGORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_CLASSIFICATION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_CLASSIFICATION_CATEGORY">
+        <PropertyRef Name="SSRS_CLASSIFICATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_CLAS__SSRS___38996AB5">
+    <End Role="SSRS_CATEGORY" Type="Self.SSRS_CATEGORY" Multiplicity="1" />
+    <End Role="SSRS_CLASSIFICATION_CATEGORY" Type="Self.SSRS_CLASSIFICATION_CATEGORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_CATEGORY">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_CLASSIFICATION_CATEGORY">
+        <PropertyRef Name="SSRS_CATEGORY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_CLAS__SSRS___3C69FB99">
+    <End Role="SSRS_CLASSIFICATION" Type="Self.SSRS_CLASSIFICATION" Multiplicity="0..1" />
+    <End Role="SSRS_CLASSIFICATION_TABLE" Type="Self.SSRS_CLASSIFICATION_TABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_CLASSIFICATION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_CLASSIFICATION_TABLE">
+        <PropertyRef Name="SSRS_CLASSIFICATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_CLAS__SSRS___3D5E1FD2">
+    <End Role="SSRS_TABLE" Type="Self.SSRS_TABLE" Multiplicity="0..1" />
+    <End Role="SSRS_CLASSIFICATION_TABLE" Type="Self.SSRS_CLASSIFICATION_TABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_TABLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_CLASSIFICATION_TABLE">
+        <PropertyRef Name="SSRS_TABLE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_CLAS__SSRS___3E52440B">
+    <End Role="SSRS_RELATION_TYPE" Type="Self.SSRS_RELATION_TYPE" Multiplicity="0..1" />
+    <End Role="SSRS_CLASSIFICATION_TABLE" Type="Self.SSRS_CLASSIFICATION_TABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_RELATION_TYPE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_CLASSIFICATION_TABLE">
+        <PropertyRef Name="SSRS_RELATION_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_CLAS__SSRS___403A8C7D">
+    <End Role="SSRS_TYPE" Type="Self.SSRS_TYPE" Multiplicity="0..1" />
+    <End Role="SSRS_CLASSIFICATION_TABLE_TYPE" Type="Self.SSRS_CLASSIFICATION_TABLE_TYPE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_TYPE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_CLASSIFICATION_TABLE_TYPE">
+        <PropertyRef Name="SSRS_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_CLAS__SSRS___412EB0B6">
+    <End Role="SSRS_CLASSIFICATION_TABLE" Type="Self.SSRS_CLASSIFICATION_TABLE" Multiplicity="0..1" />
+    <End Role="SSRS_CLASSIFICATION_TABLE_TYPE" Type="Self.SSRS_CLASSIFICATION_TABLE_TYPE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_CLASSIFICATION_TABLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_CLASSIFICATION_TABLE_TYPE">
+        <PropertyRef Name="SSRS_CLASSIFICATION_TABLE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_IS_M__SSRS___3A81B327">
+    <End Role="SSRS_CLASSIFICATION_TABLE_TYPE" Type="Self.SSRS_CLASSIFICATION_TABLE_TYPE" Multiplicity="0..1" />
+    <End Role="SSRS_IS_MAIN" Type="Self.SSRS_IS_MAIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_CLASSIFICATION_TABLE_TYPE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_IS_MAIN">
+        <PropertyRef Name="SSRS_CLASSIFICATION_TABLE_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SSRS_IS_M__SSRS___3B75D760">
+    <End Role="SSRS_ATTRIBUTE" Type="Self.SSRS_ATTRIBUTE" Multiplicity="0..1" />
+    <End Role="SSRS_IS_MAIN" Type="Self.SSRS_IS_MAIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SSRS_ATTRIBUTE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SSRS_IS_MAIN">
+        <PropertyRef Name="SSRS_ATTRIBUTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StateProv__Count__1AD3FDA4">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="StateProvince" Type="Self.StateProvince" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StateProvince">
+        <PropertyRef Name="Country_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Supplier__City_I__2739D489">
+    <End Role="City" Type="Self.City" Multiplicity="1" />
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Supplier">
+        <PropertyRef Name="City_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Supplier__Delive__1CBC4616">
+    <End Role="DeliveryMethod" Type="Self.DeliveryMethod" Multiplicity="0..1" />
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeliveryMethod">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Supplier">
+        <PropertyRef Name="DeliveryMethod_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Supplier__Suppli__1BC821DD">
+    <End Role="SupplierCategory" Type="Self.SupplierCategory" Multiplicity="1" />
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplierCategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Supplier">
+        <PropertyRef Name="SupplierCategory_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SupplierT__Payme__208CD6FA">
+    <End Role="PaymentMethod" Type="Self.PaymentMethod" Multiplicity="0..1" />
+    <End Role="SupplierTransaction" Type="Self.SupplierTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMethod">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SupplierTransaction">
+        <PropertyRef Name="PaymentMethod_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SupplierT__Purch__1F98B2C1">
+    <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="0..1" />
+    <End Role="SupplierTransaction" Type="Self.SupplierTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseOrder">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SupplierTransaction">
+        <PropertyRef Name="PurchaseOrder_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SupplierT__Suppl__1DB06A4F">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="SupplierTransaction" Type="Self.SupplierTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SupplierTransaction">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SupplierT__Trans__1EA48E88">
+    <End Role="TransactionType" Type="Self.TransactionType" Multiplicity="1" />
+    <End Role="SupplierTransaction" Type="Self.SupplierTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SupplierTransaction">
+        <PropertyRef Name="TransactionType_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_A4FAA3_SelfServiceRSModelStoreContainer">
+    <EntitySet Name="BuyingGroup" EntityType="Self.BuyingGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerCategory" EntityType="Self.CustomerCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerTransaction" EntityType="Self.CustomerTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeliveryMethod" EntityType="Self.DeliveryMethod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvoiceLine" EntityType="Self.InvoiceLine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderLine" EntityType="Self.OrderLine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentMethod" EntityType="Self.PaymentMethod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseOrder" EntityType="Self.PurchaseOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseOrderLine" EntityType="Self.PurchaseOrderLine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SpecialDeal" EntityType="Self.SpecialDeal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSRS_ATTRIBUTE" EntityType="Self.SSRS_ATTRIBUTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSRS_CATEGORY" EntityType="Self.SSRS_CATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSRS_CLASSIFICATION" EntityType="Self.SSRS_CLASSIFICATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSRS_CLASSIFICATION_CATEGORY" EntityType="Self.SSRS_CLASSIFICATION_CATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSRS_CLASSIFICATION_TABLE" EntityType="Self.SSRS_CLASSIFICATION_TABLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSRS_CLASSIFICATION_TABLE_TYPE" EntityType="Self.SSRS_CLASSIFICATION_TABLE_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSRS_IS_MAIN" EntityType="Self.SSRS_IS_MAIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSRS_MODULE" EntityType="Self.SSRS_MODULE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSRS_RELATION_TYPE" EntityType="Self.SSRS_RELATION_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSRS_TABLE" EntityType="Self.SSRS_TABLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SSRS_TYPE" EntityType="Self.SSRS_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StateProvince" EntityType="Self.StateProvince" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SupplierCategory" EntityType="Self.SupplierCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SupplierTransaction" EntityType="Self.SupplierTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransactionType" EntityType="Self.TransactionType" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__City__StateProvi__04E4BC85" Association="Self.FK__City__StateProvi__04E4BC85">
+      <End Role="StateProvince" EntitySet="StateProvince" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__Buying__06CD04F7" Association="Self.FK__Customer__Buying__06CD04F7">
+      <End Role="BuyingGroup" EntitySet="BuyingGroup" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__City_I__282DF8C2" Association="Self.FK__Customer__City_I__282DF8C2">
+      <End Role="City" EntitySet="City" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__Custom__05D8E0BE" Association="Self.FK__Customer__Custom__05D8E0BE">
+      <End Role="CustomerCategory" EntitySet="CustomerCategory" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__Delive__07C12930" Association="Self.FK__Customer__Delive__07C12930">
+      <End Role="DeliveryMethod" EntitySet="DeliveryMethod" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Customer__Delive__08B54D69" Association="Self.FK__Customer__Delive__08B54D69">
+      <End Role="DeliveryMethod" EntitySet="DeliveryMethod" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerT__Custo__09A971A2" Association="Self.FK__CustomerT__Custo__09A971A2">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="CustomerTransaction" EntitySet="CustomerTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerT__Invoi__0B91BA14" Association="Self.FK__CustomerT__Invoi__0B91BA14">
+      <End Role="Invoice" EntitySet="Invoice" />
+      <End Role="CustomerTransaction" EntitySet="CustomerTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerT__Payme__0C85DE4D" Association="Self.FK__CustomerT__Payme__0C85DE4D">
+      <End Role="PaymentMethod" EntitySet="PaymentMethod" />
+      <End Role="CustomerTransaction" EntitySet="CustomerTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CustomerT__Trans__0A9D95DB" Association="Self.FK__CustomerT__Trans__0A9D95DB">
+      <End Role="TransactionType" EntitySet="TransactionType" />
+      <End Role="CustomerTransaction" EntitySet="CustomerTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Invoice__Custome__0D7A0286" Association="Self.FK__Invoice__Custome__0D7A0286">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Invoice" EntitySet="Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Invoice__Deliver__0F624AF8" Association="Self.FK__Invoice__Deliver__0F624AF8">
+      <End Role="DeliveryMethod" EntitySet="DeliveryMethod" />
+      <End Role="Invoice" EntitySet="Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Invoice__Order_I__0E6E26BF" Association="Self.FK__Invoice__Order_I__0E6E26BF">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Invoice" EntitySet="Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InvoiceLi__Invoi__10566F31" Association="Self.FK__InvoiceLi__Invoi__10566F31">
+      <End Role="Invoice" EntitySet="Invoice" />
+      <End Role="InvoiceLine" EntitySet="InvoiceLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InvoiceLi__Invoi__114A936A" Association="Self.FK__InvoiceLi__Invoi__114A936A">
+      <End Role="Invoice" EntitySet="Invoice" />
+      <End Role="InvoiceLine" EntitySet="InvoiceLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Order__Customer___123EB7A3" Association="Self.FK__Order__Customer___123EB7A3">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Order__Customer___1332DBDC" Association="Self.FK__Order__Customer___1332DBDC">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderLine__Order__14270015" Association="Self.FK__OrderLine__Order__14270015">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderLine" EntitySet="OrderLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PurchaseO__Deliv__160F4887" Association="Self.FK__PurchaseO__Deliv__160F4887">
+      <End Role="DeliveryMethod" EntitySet="DeliveryMethod" />
+      <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PurchaseO__Purch__17036CC0" Association="Self.FK__PurchaseO__Purch__17036CC0">
+      <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+      <End Role="PurchaseOrderLine" EntitySet="PurchaseOrderLine" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PurchaseO__Suppl__151B244E" Association="Self.FK__PurchaseO__Suppl__151B244E">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SpecialDe__Buyin__18EBB532" Association="Self.FK__SpecialDe__Buyin__18EBB532">
+      <End Role="BuyingGroup" EntitySet="BuyingGroup" />
+      <End Role="SpecialDeal" EntitySet="SpecialDeal" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SpecialDe__Custo__17F790F9" Association="Self.FK__SpecialDe__Custo__17F790F9">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="SpecialDeal" EntitySet="SpecialDeal" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SpecialDe__Custo__19DFD96B" Association="Self.FK__SpecialDe__Custo__19DFD96B">
+      <End Role="CustomerCategory" EntitySet="CustomerCategory" />
+      <End Role="SpecialDeal" EntitySet="SpecialDeal" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_ATTR__SSRS___398D8EEE" Association="Self.FK__SSRS_ATTR__SSRS___398D8EEE">
+      <End Role="SSRS_TABLE" EntitySet="SSRS_TABLE" />
+      <End Role="SSRS_ATTRIBUTE" EntitySet="SSRS_ATTRIBUTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_CATE__SSRS___4CA06362" Association="Self.FK__SSRS_CATE__SSRS___4CA06362">
+      <End Role="SSRS_MODULE" EntitySet="SSRS_MODULE" />
+      <End Role="SSRS_CATEGORY" EntitySet="SSRS_CATEGORY" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_CLAS__PAREN__3F466844" Association="Self.FK__SSRS_CLAS__PAREN__3F466844">
+      <End Role="SSRS_CLASSIFICATION_TABLE" EntitySet="SSRS_CLASSIFICATION_TABLE" />
+      <End Role="SSRS_CLASSIFICATION_TABLE1" EntitySet="SSRS_CLASSIFICATION_TABLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_CLAS__SSRS___37A5467C" Association="Self.FK__SSRS_CLAS__SSRS___37A5467C">
+      <End Role="SSRS_CLASSIFICATION" EntitySet="SSRS_CLASSIFICATION" />
+      <End Role="SSRS_CLASSIFICATION_CATEGORY" EntitySet="SSRS_CLASSIFICATION_CATEGORY" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_CLAS__SSRS___38996AB5" Association="Self.FK__SSRS_CLAS__SSRS___38996AB5">
+      <End Role="SSRS_CATEGORY" EntitySet="SSRS_CATEGORY" />
+      <End Role="SSRS_CLASSIFICATION_CATEGORY" EntitySet="SSRS_CLASSIFICATION_CATEGORY" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_CLAS__SSRS___3C69FB99" Association="Self.FK__SSRS_CLAS__SSRS___3C69FB99">
+      <End Role="SSRS_CLASSIFICATION" EntitySet="SSRS_CLASSIFICATION" />
+      <End Role="SSRS_CLASSIFICATION_TABLE" EntitySet="SSRS_CLASSIFICATION_TABLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_CLAS__SSRS___3D5E1FD2" Association="Self.FK__SSRS_CLAS__SSRS___3D5E1FD2">
+      <End Role="SSRS_TABLE" EntitySet="SSRS_TABLE" />
+      <End Role="SSRS_CLASSIFICATION_TABLE" EntitySet="SSRS_CLASSIFICATION_TABLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_CLAS__SSRS___3E52440B" Association="Self.FK__SSRS_CLAS__SSRS___3E52440B">
+      <End Role="SSRS_RELATION_TYPE" EntitySet="SSRS_RELATION_TYPE" />
+      <End Role="SSRS_CLASSIFICATION_TABLE" EntitySet="SSRS_CLASSIFICATION_TABLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_CLAS__SSRS___403A8C7D" Association="Self.FK__SSRS_CLAS__SSRS___403A8C7D">
+      <End Role="SSRS_TYPE" EntitySet="SSRS_TYPE" />
+      <End Role="SSRS_CLASSIFICATION_TABLE_TYPE" EntitySet="SSRS_CLASSIFICATION_TABLE_TYPE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_CLAS__SSRS___412EB0B6" Association="Self.FK__SSRS_CLAS__SSRS___412EB0B6">
+      <End Role="SSRS_CLASSIFICATION_TABLE" EntitySet="SSRS_CLASSIFICATION_TABLE" />
+      <End Role="SSRS_CLASSIFICATION_TABLE_TYPE" EntitySet="SSRS_CLASSIFICATION_TABLE_TYPE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_IS_M__SSRS___3A81B327" Association="Self.FK__SSRS_IS_M__SSRS___3A81B327">
+      <End Role="SSRS_CLASSIFICATION_TABLE_TYPE" EntitySet="SSRS_CLASSIFICATION_TABLE_TYPE" />
+      <End Role="SSRS_IS_MAIN" EntitySet="SSRS_IS_MAIN" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SSRS_IS_M__SSRS___3B75D760" Association="Self.FK__SSRS_IS_M__SSRS___3B75D760">
+      <End Role="SSRS_ATTRIBUTE" EntitySet="SSRS_ATTRIBUTE" />
+      <End Role="SSRS_IS_MAIN" EntitySet="SSRS_IS_MAIN" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StateProv__Count__1AD3FDA4" Association="Self.FK__StateProv__Count__1AD3FDA4">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="StateProvince" EntitySet="StateProvince" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Supplier__City_I__2739D489" Association="Self.FK__Supplier__City_I__2739D489">
+      <End Role="City" EntitySet="City" />
+      <End Role="Supplier" EntitySet="Supplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Supplier__Delive__1CBC4616" Association="Self.FK__Supplier__Delive__1CBC4616">
+      <End Role="DeliveryMethod" EntitySet="DeliveryMethod" />
+      <End Role="Supplier" EntitySet="Supplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Supplier__Suppli__1BC821DD" Association="Self.FK__Supplier__Suppli__1BC821DD">
+      <End Role="SupplierCategory" EntitySet="SupplierCategory" />
+      <End Role="Supplier" EntitySet="Supplier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SupplierT__Payme__208CD6FA" Association="Self.FK__SupplierT__Payme__208CD6FA">
+      <End Role="PaymentMethod" EntitySet="PaymentMethod" />
+      <End Role="SupplierTransaction" EntitySet="SupplierTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SupplierT__Purch__1F98B2C1" Association="Self.FK__SupplierT__Purch__1F98B2C1">
+      <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+      <End Role="SupplierTransaction" EntitySet="SupplierTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SupplierT__Suppl__1DB06A4F" Association="Self.FK__SupplierT__Suppl__1DB06A4F">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="SupplierTransaction" EntitySet="SupplierTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SupplierT__Trans__1EA48E88" Association="Self.FK__SupplierT__Trans__1EA48E88">
+      <End Role="TransactionType" EntitySet="TransactionType" />
+      <End Role="SupplierTransaction" EntitySet="SupplierTransaction" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A4FAA3_SelfServiceRSModelStoreContainer" CdmEntityContainer="DB_A4FAA3_SelfServiceRSEntities">
+    <EntitySetMapping Name="BuyingGroups">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.BuyingGroup">
+        <MappingFragment StoreEntitySet="BuyingGroup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BuyingGroupName" ColumnName="BuyingGroupName" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateProvince_ID" ColumnName="StateProvince_ID" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="LatestRecordedPopulation" ColumnName="LatestRecordedPopulation" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="FormalName" ColumnName="FormalName" />
+          <ScalarProperty Name="IsoAlpha3Code" ColumnName="IsoAlpha3Code" />
+          <ScalarProperty Name="IsoNumericCode" ColumnName="IsoNumericCode" />
+          <ScalarProperty Name="CountryType" ColumnName="CountryType" />
+          <ScalarProperty Name="LatestRecordedPopulation" ColumnName="LatestRecordedPopulation" />
+          <ScalarProperty Name="Continent" ColumnName="Continent" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Subregion" ColumnName="Subregion" />
+          <ScalarProperty Name="Border" ColumnName="Border" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="BillToCustomer_ID" ColumnName="BillToCustomer_ID" />
+          <ScalarProperty Name="CustomerCategory_ID" ColumnName="CustomerCategory_ID" />
+          <ScalarProperty Name="BuyingGroup_ID" ColumnName="BuyingGroup_ID" />
+          <ScalarProperty Name="PrimaryContactPerson_ID" ColumnName="PrimaryContactPerson_ID" />
+          <ScalarProperty Name="AlternateContactPerson_ID" ColumnName="AlternateContactPerson_ID" />
+          <ScalarProperty Name="DeliveryMethod_ID" ColumnName="DeliveryMethod_ID" />
+          <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+          <ScalarProperty Name="CreditLimit" ColumnName="CreditLimit" />
+          <ScalarProperty Name="AccountOpenedDate" ColumnName="AccountOpenedDate" />
+          <ScalarProperty Name="StandardDiscountPercentage" ColumnName="StandardDiscountPercentage" />
+          <ScalarProperty Name="IsStatementSent" ColumnName="IsStatementSent" />
+          <ScalarProperty Name="IsOnCreditHold" ColumnName="IsOnCreditHold" />
+          <ScalarProperty Name="PaymentDays" ColumnName="PaymentDays" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="DeliveryRun" ColumnName="DeliveryRun" />
+          <ScalarProperty Name="RunPosition" ColumnName="RunPosition" />
+          <ScalarProperty Name="WebsiteURL" ColumnName="WebsiteURL" />
+          <ScalarProperty Name="DeliveryAddressLine1" ColumnName="DeliveryAddressLine1" />
+          <ScalarProperty Name="DeliveryAddressLine2" ColumnName="DeliveryAddressLine2" />
+          <ScalarProperty Name="DeliveryPostalCode" ColumnName="DeliveryPostalCode" />
+          <ScalarProperty Name="DeliveryLocation" ColumnName="DeliveryLocation" />
+          <ScalarProperty Name="PostalAddressLine1" ColumnName="PostalAddressLine1" />
+          <ScalarProperty Name="PostalAddressLine2" ColumnName="PostalAddressLine2" />
+          <ScalarProperty Name="PostalPostalCode" ColumnName="PostalPostalCode" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerCategories">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.CustomerCategory">
+        <MappingFragment StoreEntitySet="CustomerCategory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CustomerCategoryName" ColumnName="CustomerCategoryName" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerTransactions">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.CustomerTransaction">
+        <MappingFragment StoreEntitySet="CustomerTransaction">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="TransactionType_ID" ColumnName="TransactionType_ID" />
+          <ScalarProperty Name="Invoice_ID" ColumnName="Invoice_ID" />
+          <ScalarProperty Name="PaymentMethod_ID" ColumnName="PaymentMethod_ID" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="AmountExcludingTax" ColumnName="AmountExcludingTax" />
+          <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+          <ScalarProperty Name="TransactionAmount" ColumnName="TransactionAmount" />
+          <ScalarProperty Name="OutstandingBalance" ColumnName="OutstandingBalance" />
+          <ScalarProperty Name="FinalizationDate" ColumnName="FinalizationDate" />
+          <ScalarProperty Name="IsFinalized" ColumnName="IsFinalized" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeliveryMethods">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.DeliveryMethod">
+        <MappingFragment StoreEntitySet="DeliveryMethod">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DeliveryMethodName" ColumnName="DeliveryMethodName" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="BillToCustomer_ID" ColumnName="BillToCustomer_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="DeliveryMethod_ID" ColumnName="DeliveryMethod_ID" />
+          <ScalarProperty Name="ContactPerson_ID" ColumnName="ContactPerson_ID" />
+          <ScalarProperty Name="AccountsPerson_ID" ColumnName="AccountsPerson_ID" />
+          <ScalarProperty Name="SalespersonPerson_ID" ColumnName="SalespersonPerson_ID" />
+          <ScalarProperty Name="PackedByPerson_ID" ColumnName="PackedByPerson_ID" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="CustomerPurchaseOrderNumber" ColumnName="CustomerPurchaseOrderNumber" />
+          <ScalarProperty Name="IsCreditNote" ColumnName="IsCreditNote" />
+          <ScalarProperty Name="CreditNoteReason" ColumnName="CreditNoteReason" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DeliveryInstructions" ColumnName="DeliveryInstructions" />
+          <ScalarProperty Name="InternalComments" ColumnName="InternalComments" />
+          <ScalarProperty Name="TotalDryItems" ColumnName="TotalDryItems" />
+          <ScalarProperty Name="TotalChillerItems" ColumnName="TotalChillerItems" />
+          <ScalarProperty Name="DeliveryRun" ColumnName="DeliveryRun" />
+          <ScalarProperty Name="RunPosition" ColumnName="RunPosition" />
+          <ScalarProperty Name="ReturnedDeliveryData" ColumnName="ReturnedDeliveryData" />
+          <ScalarProperty Name="ConfirmedDeliveryTime" ColumnName="ConfirmedDeliveryTime" />
+          <ScalarProperty Name="ConfirmedReceivedBy" ColumnName="ConfirmedReceivedBy" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceLines">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.InvoiceLine">
+        <MappingFragment StoreEntitySet="InvoiceLine">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Invoice_ID" ColumnName="Invoice_ID" />
+          <ScalarProperty Name="StockItem_ID" ColumnName="StockItem_ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PackageType_ID" ColumnName="PackageType_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+          <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+          <ScalarProperty Name="LineProfit" ColumnName="LineProfit" />
+          <ScalarProperty Name="ExtendedPrice" ColumnName="ExtendedPrice" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="SalespersonPerson_ID" ColumnName="SalespersonPerson_ID" />
+          <ScalarProperty Name="PickedByPerson_ID" ColumnName="PickedByPerson_ID" />
+          <ScalarProperty Name="ContactPerson_ID" ColumnName="ContactPerson_ID" />
+          <ScalarProperty Name="BackorderOrder_ID" ColumnName="BackorderOrder_ID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="ExpectedDeliveryDate" ColumnName="ExpectedDeliveryDate" />
+          <ScalarProperty Name="CustomerPurchaseOrderNumber" ColumnName="CustomerPurchaseOrderNumber" />
+          <ScalarProperty Name="IsUndersupplyBackordered" ColumnName="IsUndersupplyBackordered" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DeliveryInstructions" ColumnName="DeliveryInstructions" />
+          <ScalarProperty Name="InternalComments" ColumnName="InternalComments" />
+          <ScalarProperty Name="PickingCompletedWhen" ColumnName="PickingCompletedWhen" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderLines">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.OrderLine">
+        <MappingFragment StoreEntitySet="OrderLine">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="StockItem_ID" ColumnName="StockItem_ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PackageType_ID" ColumnName="PackageType_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+          <ScalarProperty Name="PickedQuantity" ColumnName="PickedQuantity" />
+          <ScalarProperty Name="PickingCompletedWhen" ColumnName="PickingCompletedWhen" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentMethods">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.PaymentMethod">
+        <MappingFragment StoreEntitySet="PaymentMethod">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PaymentMethodName" ColumnName="PaymentMethodName" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrders">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.PurchaseOrder">
+        <MappingFragment StoreEntitySet="PurchaseOrder">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="DeliveryMethod_ID" ColumnName="DeliveryMethod_ID" />
+          <ScalarProperty Name="ContactPerson_ID" ColumnName="ContactPerson_ID" />
+          <ScalarProperty Name="ExpectedDeliveryDate" ColumnName="ExpectedDeliveryDate" />
+          <ScalarProperty Name="SupplierReference" ColumnName="SupplierReference" />
+          <ScalarProperty Name="IsOrderFinalized" ColumnName="IsOrderFinalized" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="InternalComments" ColumnName="InternalComments" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrderLines">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.PurchaseOrderLine">
+        <MappingFragment StoreEntitySet="PurchaseOrderLine">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PurchaseOrder_ID" ColumnName="PurchaseOrder_ID" />
+          <ScalarProperty Name="StockItem_ID" ColumnName="StockItem_ID" />
+          <ScalarProperty Name="OrderedOuters" ColumnName="OrderedOuters" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ReceivedOuters" ColumnName="ReceivedOuters" />
+          <ScalarProperty Name="PackageType_ID" ColumnName="PackageType_ID" />
+          <ScalarProperty Name="ExpectedUnitPricePerOuter" ColumnName="ExpectedUnitPricePerOuter" />
+          <ScalarProperty Name="LastReceiptDate" ColumnName="LastReceiptDate" />
+          <ScalarProperty Name="IsOrderLineFinalized" ColumnName="IsOrderLineFinalized" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecialDeals">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SpecialDeal">
+        <MappingFragment StoreEntitySet="SpecialDeal">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StockItem_ID" ColumnName="StockItem_ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="BuyingGroup_ID" ColumnName="BuyingGroup_ID" />
+          <ScalarProperty Name="CustomerCategory_ID" ColumnName="CustomerCategory_ID" />
+          <ScalarProperty Name="StockGroup_ID" ColumnName="StockGroup_ID" />
+          <ScalarProperty Name="DealDescription" ColumnName="DealDescription" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="DiscountPercentage" ColumnName="DiscountPercentage" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSRS_ATTRIBUTE">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SSRS_ATTRIBUTE">
+        <MappingFragment StoreEntitySet="SSRS_ATTRIBUTE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SSRS_TABLE_ID" ColumnName="SSRS_TABLE_ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+          <ScalarProperty Name="ATTR_ORDER" ColumnName="ATTR_ORDER" />
+          <ScalarProperty Name="DATATYPE" ColumnName="DATATYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSRS_CATEGORY">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SSRS_CATEGORY">
+        <MappingFragment StoreEntitySet="SSRS_CATEGORY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="CAT_ORDER" ColumnName="CAT_ORDER" />
+          <ScalarProperty Name="SSRS_MODULE_ID" ColumnName="SSRS_MODULE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSRS_CLASSIFICATION">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SSRS_CLASSIFICATION">
+        <MappingFragment StoreEntitySet="SSRS_CLASSIFICATION">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="IS_UNION" ColumnName="IS_UNION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSRS_CLASSIFICATION_CATEGORY">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SSRS_CLASSIFICATION_CATEGORY">
+        <MappingFragment StoreEntitySet="SSRS_CLASSIFICATION_CATEGORY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SSRS_CLASSIFICATION_ID" ColumnName="SSRS_CLASSIFICATION_ID" />
+          <ScalarProperty Name="SSRS_CATEGORY_ID" ColumnName="SSRS_CATEGORY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSRS_CLASSIFICATION_TABLE">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SSRS_CLASSIFICATION_TABLE">
+        <MappingFragment StoreEntitySet="SSRS_CLASSIFICATION_TABLE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SSRS_CLASSIFICATION_ID" ColumnName="SSRS_CLASSIFICATION_ID" />
+          <ScalarProperty Name="SSRS_TABLE_ID" ColumnName="SSRS_TABLE_ID" />
+          <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+          <ScalarProperty Name="TABLE_ORDER" ColumnName="TABLE_ORDER" />
+          <ScalarProperty Name="PARENT_ID" ColumnName="PARENT_ID" />
+          <ScalarProperty Name="SSRS_RELATION_TYPE_ID" ColumnName="SSRS_RELATION_TYPE_ID" />
+          <ScalarProperty Name="INJUNCTION_TABLE" ColumnName="INJUNCTION_TABLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSRS_CLASSIFICATION_TABLE_TYPE">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SSRS_CLASSIFICATION_TABLE_TYPE">
+        <MappingFragment StoreEntitySet="SSRS_CLASSIFICATION_TABLE_TYPE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SSRS_CLASSIFICATION_TABLE_ID" ColumnName="SSRS_CLASSIFICATION_TABLE_ID" />
+          <ScalarProperty Name="SSRS_TYPE_ID" ColumnName="SSRS_TYPE_ID" />
+          <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+          <ScalarProperty Name="TABLE_ORDER" ColumnName="TABLE_ORDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSRS_IS_MAIN">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SSRS_IS_MAIN">
+        <MappingFragment StoreEntitySet="SSRS_IS_MAIN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SSRS_CLASSIFICATION_TABLE_TYPE_ID" ColumnName="SSRS_CLASSIFICATION_TABLE_TYPE_ID" />
+          <ScalarProperty Name="SSRS_ATTRIBUTE_ID" ColumnName="SSRS_ATTRIBUTE_ID" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSRS_MODULE">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SSRS_MODULE">
+        <MappingFragment StoreEntitySet="SSRS_MODULE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSRS_RELATION_TYPE">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SSRS_RELATION_TYPE">
+        <MappingFragment StoreEntitySet="SSRS_RELATION_TYPE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSRS_TABLE">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SSRS_TABLE">
+        <MappingFragment StoreEntitySet="SSRS_TABLE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SSRS_TYPE">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SSRS_TYPE">
+        <MappingFragment StoreEntitySet="SSRS_TYPE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StateProvinces">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.StateProvince">
+        <MappingFragment StoreEntitySet="StateProvince">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StateProvinceCode" ColumnName="StateProvinceCode" />
+          <ScalarProperty Name="StateProvinceName" ColumnName="StateProvinceName" />
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="SalesTerritory" ColumnName="SalesTerritory" />
+          <ScalarProperty Name="Border" ColumnName="Border" />
+          <ScalarProperty Name="LatestRecordedPopulation" ColumnName="LatestRecordedPopulation" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierCategory_ID" ColumnName="SupplierCategory_ID" />
+          <ScalarProperty Name="PrimaryContactPerson_ID" ColumnName="PrimaryContactPerson_ID" />
+          <ScalarProperty Name="AlternateContactPerson_ID" ColumnName="AlternateContactPerson_ID" />
+          <ScalarProperty Name="DeliveryMethod_ID" ColumnName="DeliveryMethod_ID" />
+          <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+          <ScalarProperty Name="SupplierReference" ColumnName="SupplierReference" />
+          <ScalarProperty Name="BankAccountName" ColumnName="BankAccountName" />
+          <ScalarProperty Name="BankAccountBranch" ColumnName="BankAccountBranch" />
+          <ScalarProperty Name="BankAccountCode" ColumnName="BankAccountCode" />
+          <ScalarProperty Name="BankAccountNumber" ColumnName="BankAccountNumber" />
+          <ScalarProperty Name="BankInternationalCode" ColumnName="BankInternationalCode" />
+          <ScalarProperty Name="PaymentDays" ColumnName="PaymentDays" />
+          <ScalarProperty Name="InternalComments" ColumnName="InternalComments" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="WebsiteURL" ColumnName="WebsiteURL" />
+          <ScalarProperty Name="DeliveryAddressLine1" ColumnName="DeliveryAddressLine1" />
+          <ScalarProperty Name="DeliveryAddressLine2" ColumnName="DeliveryAddressLine2" />
+          <ScalarProperty Name="DeliveryPostalCode" ColumnName="DeliveryPostalCode" />
+          <ScalarProperty Name="DeliveryLocation" ColumnName="DeliveryLocation" />
+          <ScalarProperty Name="PostalAddressLine1" ColumnName="PostalAddressLine1" />
+          <ScalarProperty Name="PostalAddressLine2" ColumnName="PostalAddressLine2" />
+          <ScalarProperty Name="PostalPostalCode" ColumnName="PostalPostalCode" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierCategories">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SupplierCategory">
+        <MappingFragment StoreEntitySet="SupplierCategory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SupplierCategoryName" ColumnName="SupplierCategoryName" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierTransactions">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.SupplierTransaction">
+        <MappingFragment StoreEntitySet="SupplierTransaction">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="TransactionType_ID" ColumnName="TransactionType_ID" />
+          <ScalarProperty Name="PurchaseOrder_ID" ColumnName="PurchaseOrder_ID" />
+          <ScalarProperty Name="PaymentMethod_ID" ColumnName="PaymentMethod_ID" />
+          <ScalarProperty Name="SupplierInvoiceNumber" ColumnName="SupplierInvoiceNumber" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="AmountExcludingTax" ColumnName="AmountExcludingTax" />
+          <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+          <ScalarProperty Name="TransactionAmount" ColumnName="TransactionAmount" />
+          <ScalarProperty Name="OutstandingBalance" ColumnName="OutstandingBalance" />
+          <ScalarProperty Name="FinalizationDate" ColumnName="FinalizationDate" />
+          <ScalarProperty Name="IsFinalized" ColumnName="IsFinalized" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionTypes">
+      <EntityTypeMapping TypeName="DB_A4FAA3_SelfServiceRSModel.TransactionType">
+        <MappingFragment StoreEntitySet="TransactionType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TransactionTypeName" ColumnName="TransactionTypeName" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

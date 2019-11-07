@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c915c5ce802f4b109aa705cebdbd0df4" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.BuyingGroup" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.City" Width="1.5" PointX="0.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.Country" Width="1.5" PointX="1.5" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.Customer" Width="1.5" PointX="3" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.CustomerCategory" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.CustomerTransaction" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.DeliveryMethod" Width="1.5" PointX="0.75" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.Invoice" Width="1.5" PointX="10.5" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.InvoiceLine" Width="1.5" PointX="12.75" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.Order" Width="1.5" PointX="5.25" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.OrderLine" Width="1.5" PointX="7.5" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.PaymentMethod" Width="1.5" PointX="3" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.PurchaseOrder" Width="1.5" PointX="6" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.PurchaseOrderLine" Width="1.5" PointX="8.25" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SpecialDeal" Width="1.5" PointX="5.25" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SSRS_ATTRIBUTE" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SSRS_CATEGORY" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SSRS_CLASSIFICATION" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SSRS_CLASSIFICATION_CATEGORY" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SSRS_CLASSIFICATION_TABLE" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SSRS_CLASSIFICATION_TABLE_TYPE" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SSRS_IS_MAIN" Width="1.5" PointX="10.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SSRS_MODULE" Width="1.5" PointX="1.5" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SSRS_RELATION_TYPE" Width="1.5" PointX="3.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SSRS_TABLE" Width="1.5" PointX="3.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SSRS_TYPE" Width="1.5" PointX="6" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.StateProvince" Width="1.5" PointX="1.5" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.Supplier" Width="1.5" PointX="9" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SupplierCategory" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.SupplierTransaction" Width="1.5" PointX="11.25" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.sysdiagram" Width="1.5" PointX="5.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4FAA3_SelfServiceRSModel.TransactionType" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Customer__Buying__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SpecialDe__Buyin__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__City__StateProvi__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Customer__City_I__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Supplier__City_I__2739D489" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__StateProv__Count__1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Customer__Custom__05D8E0BE" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Customer__Delive__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Customer__Delive__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__CustomerT__Custo__09A971A2" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Invoice__Custome__0D7A0286" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Order__Customer___123EB7A3" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Order__Customer___1332DBDC" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SpecialDe__Custo__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SpecialDe__Custo__19DFD96B" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__CustomerT__Invoi__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__CustomerT__Payme__0C85DE4D" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__CustomerT__Trans__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Invoice__Deliver__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__PurchaseO__Deliv__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Supplier__Delive__1CBC4616" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Invoice__Order_I__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__InvoiceLi__Invoi__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__InvoiceLi__Invoi__114A936A" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__OrderLine__Order__14270015" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SupplierT__Payme__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__PurchaseO__Purch__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__PurchaseO__Suppl__151B244E" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SupplierT__Purch__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_ATTR__SSRS___398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_IS_M__SSRS___3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_CATE__SSRS___4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_CLAS__SSRS___38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_CLAS__SSRS___37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_CLAS__SSRS___3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_CLAS__PAREN__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_CLAS__SSRS___3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_CLAS__SSRS___3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_CLAS__SSRS___412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_CLAS__SSRS___403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SSRS_IS_M__SSRS___3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__Supplier__Suppli__1BC821DD" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SupplierT__Suppl__1DB06A4F" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4FAA3_SelfServiceRSModel.FK__SupplierT__Trans__1EA48E88" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

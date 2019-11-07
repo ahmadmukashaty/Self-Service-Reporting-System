@@ -11,6 +11,7 @@ namespace SSRS.WebAPi.Models.Helper
         {
             public const string EMPTY_MESSAGE = "";
             public const string UNEXPECTED_ERROR_MESSAGE = "Unexpected Error";
+            public const string USER_NOT_EXIST = "Username or password is invaild";
         }
 
         public static class Relations

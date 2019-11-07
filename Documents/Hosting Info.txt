@@ -24,5 +24,9 @@ SQL SERVER Port: 1433
 
 API URL: http://selfsevicers-001-site1.itempurl.com/
 Attribute Tree Api: http://selfsevicers-001-site1.itempurl.com/api/GetAttributeTree?ClassificationName=Purchase%20Order
+Login Api: http://selfsevicers-001-site1.itempurl.com/api/Login
+Register Api: http://selfsevicers-001-site1.itempurl.com/api/Register
+
+UI Link: https://ssrsdemoelte.000webhostapp.com/
 
  

@@ -212,6 +212,9 @@
     <Compile Include="City.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Authentication\LoginController.cs" />
+    <Compile Include="Controllers\Authentication\RegisterController.cs" />
+    <Compile Include="Controllers\Authentication\testController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReportAttributeTree\GetAttributeTreeController.cs" />
     <Compile Include="Country.cs">
@@ -256,6 +259,8 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Authentication\UserInfo.cs" />
+    <Compile Include="Models\Authentication\UserRegister.cs" />
     <Compile Include="Models\Helper\Constants.cs" />
     <Compile Include="Models\Helper\ResponseJson.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -400,6 +405,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\GetAttributeTree\" />
+    <Folder Include="Views\Login\" />
+    <Folder Include="Views\Register\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
