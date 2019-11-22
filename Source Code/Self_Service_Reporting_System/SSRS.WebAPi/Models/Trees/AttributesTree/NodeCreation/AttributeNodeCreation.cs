@@ -14,6 +14,7 @@ namespace SSRS.WebAPi.Models.Trees.AttributesTree.NodeCreation
         {
             AttributeNodeData rootAttributes = new AttributeNodeData(0, 0, null, ColumnName, ColumnType);
             this.Tree = new TreeModel(DisplayName, rootAttributes, true);
+
         }
     }
 }

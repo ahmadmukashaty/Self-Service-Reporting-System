@@ -215,7 +215,9 @@
     <Compile Include="Controllers\Authentication\LoginController.cs" />
     <Compile Include="Controllers\Authentication\RegisterController.cs" />
     <Compile Include="Controllers\Authentication\testController.cs" />
+    <Compile Include="Controllers\DynamicJoinQuery\GenerateAdhocCategoryReportController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReportAttributeTree\GetAttributeListController.cs" />
     <Compile Include="Controllers\ReportAttributeTree\GetAttributeTreeController.cs" />
     <Compile Include="Country.cs">
       <DependentUpon>Model2.tt</DependentUpon>
@@ -230,6 +232,8 @@
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\DataLookup.cs" />
+    <Compile Include="DbLayer\Exstension.cs" />
+    <Compile Include="DbLayer\Helper.cs" />
     <Compile Include="DeliveryMethod.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
@@ -261,15 +265,26 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Authentication\UserInfo.cs" />
     <Compile Include="Models\Authentication\UserRegister.cs" />
+    <Compile Include="Models\DynamicReport\AdhocCategoryReportCreation.cs" />
+    <Compile Include="Models\DynamicReport\AdhocReportQueryData.cs" />
+    <Compile Include="Models\DynamicReport\AdhocReportReturnedData.cs" />
+    <Compile Include="Models\DynamicReport\AdhocUnionReportCreation.cs" />
+    <Compile Include="Models\DynamicReport\GraphTraversal.cs" />
+    <Compile Include="Models\DynamicReport\ReportHeader.cs" />
+    <Compile Include="Models\DynamicReport\ReportLevelsModelView.cs" />
+    <Compile Include="Models\DynamicReport\SelectClause.cs" />
+    <Compile Include="Models\DynamicReport\WhereClause.cs" />
     <Compile Include="Models\Helper\Constants.cs" />
     <Compile Include="Models\Helper\ResponseJson.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\SubCategoryTree\CategoryModelView.cs" />
     <Compile Include="Models\Trees\AttributesTree\AttributeNodeData.cs" />
     <Compile Include="Models\Trees\AttributesTree\ModelViews\AttributeModelView.cs" />
     <Compile Include="Models\Trees\AttributesTree\ModelViews\LevelModelView.cs" />
     <Compile Include="Models\Trees\AttributesTree\NodeCreation\AttributeNodeCreation.cs" />
     <Compile Include="Models\Trees\AttributesTree\NodeCreation\AttributeTreeCreation.cs" />
     <Compile Include="Models\Trees\AttributesTree\NodeCreation\LevelTreeCreation.cs" />
+    <Compile Include="Models\Trees\Shared\TreeListModelView.cs" />
     <Compile Include="Models\Trees\Shared\TreeModel.cs" />
     <Compile Include="Order.cs">
       <DependentUpon>Model2.tt</DependentUpon>

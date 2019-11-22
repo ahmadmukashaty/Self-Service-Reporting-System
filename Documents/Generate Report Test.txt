@@ -1,0 +1,15 @@
+{
+	"ClassificationName" : "Purchase Order",
+	"JoinType" : "innerjoin",
+	
+	"SelectClauses" : 
+	[
+		{
+			"Name": "test",
+			"TableName": "DeliveryMethod",
+			"ColumnName": "DeliveryMethodName",
+			"ColumnType": "nvarchar"
+		}
+	],
+	"WhereClauses" : []
+}

@@ -87,3 +87,4 @@ C:\Users\Ahmadmk\documents\visual studio 2015\Projects\Self_Service_Reporting_Sy
 C:\Users\Ahmadmk\documents\visual studio 2015\Projects\Self_Service_Reporting_System\SSRS.WebAPi\bin\System.Web.Http.Owin.xml
 C:\Users\Ahmadmk\documents\visual studio 2015\Projects\Self_Service_Reporting_System\SSRS.WebAPi\obj\Release\SSRS.WebAPi.dll
 C:\Users\Ahmadmk\documents\visual studio 2015\Projects\Self_Service_Reporting_System\SSRS.WebAPi\obj\Release\SSRS.WebAPi.pdb
+C:\Users\Ahmadmk\Documents\Visual Studio 2015\Projects\Self_Service_Reporting_System\SSRS.WebAPi\obj\Release\SSRS.WebAPi.csprojResolveAssemblyReference.cache
