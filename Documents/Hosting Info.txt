@@ -29,7 +29,49 @@ Login Api: http://selfsevicers-001-site1.itempurl.com/api/Login
 Register Api: http://selfsevicers-001-site1.itempurl.com/api/Register
 Generate Report Api: http://selfsevicers-001-site1.itempurl.com/api/GenerateAdhocCategoryReport
 
+Filters Trees URL
+Purchase Order
+http://selfsevicers-001-site1.itempurl.com/api/GetFilterTree?ClassificationName=Purchase%20Order&FilterName=Country
+http://selfsevicers-001-site1.itempurl.com/api/GetFilterTree?ClassificationName=Purchase%20Order&FilterName=Delivery%20Method
+http://selfsevicers-001-site1.itempurl.com/api/GetFilterTree?ClassificationName=Purchase%20Order&FilterName=Payment%20Method
+
+Customer
+http://selfsevicers-001-site1.itempurl.com/api/GetFilterTree?ClassificationName=Customer&FilterName=Country
+http://selfsevicers-001-site1.itempurl.com/api/GetFilterTree?ClassificationName=Customer&FilterName=Customer%20Transaction
+http://selfsevicers-001-site1.itempurl.com/api/GetFilterTree?ClassificationName=Customer&FilterName=Transaction%20Type
+
+Supplier
+http://selfsevicers-001-site1.itempurl.com/api/GetFilterTree?ClassificationName=Supplier&FilterName=Country
+http://selfsevicers-001-site1.itempurl.com/api/GetFilterTree?ClassificationName=Supplier&FilterName=Supplier%20Transaction
+http://selfsevicers-001-site1.itempurl.com/api/GetFilterTree?ClassificationName=Supplier&FilterName=Transaction%20Type
+
+
 
 UI Link: https://ssrsdemoelte.000webhostapp.com/
+
+
+FrontEnd:
+Username: MoayadMansour
+Password: krr#HQdNfpZMf8t
+host Account id: moayadmansour-001
+hosting plan name: W60-US
+
+FTP Address ：	FTP.SITE4NOW.NET
+FTP Username ：	moayadmansour-001
+FTP Password ：	krr#HQdNfpZMf8t
+FTP Directory	\
+
+DB: db_a507a1_SelfServiceRS
+
+MSSQL: sql5044.site4now.net
+Username: DB_A507A1_SelfServiceRS_admin
+Database password: SSRS_123
+
+
+API URL: http://moayadmansour-001-site1.gtempurl.com/
+
+
+
+
 
  
